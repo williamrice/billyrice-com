@@ -1,0 +1,23 @@
+:root {
+    /* backgrounds */
+    --color-bg-base: #0f1117;
+    --color-bg-surface: #161b27;
+    --color-bg-elevated: #1e2535;
+    --color-bg-subtle: #252d3e;
+    --color-border: #2e3a52;
+
+    /* typography */
+    --color-text-primary: #e8ecf4;
+    --color-text-secondary: #8b9bb8;
+    --color-text-muted: #4e5d78;
+
+    /* primary – periwinkle blue */
+    --color-primary: #7c9ef5;
+    --color-primary-dim: #3d5bbd;
+    --color-primary-glow: #1a2d6b;
+
+    /* secondary – seafoam green */
+    --color-secondary: #56d4a8;
+    --color-secondary-dim: #1f8c6a;
+    --color-secondary-glow: #0c3b2e;
+}
