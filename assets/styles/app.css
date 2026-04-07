@@ -1,3 +1,64 @@
+:root {
+    /* backgrounds */
+    --color-bg-base: #0f1117;
+    --color-bg-surface: #161b27;
+    --color-bg-elevated: #1e2535;
+    --color-bg-subtle: #252d3e;
+    --color-border: #2e3a52;
+
+    /* typography */
+    --color-text-primary: #e8ecf4;
+    --color-text-secondary: #8b9bb8;
+    --color-text-muted: #4e5d78;
+
+    /* primary – periwinkle blue */
+    --color-primary: #7c9ef5;
+    --color-primary-dim: #3d5bbd;
+    --color-primary-glow: #1a2d6b;
+
+    /* secondary – seafoam green */
+    --color-secondary: #56d4a8;
+    --color-secondary-dim: #1f8c6a;
+    --color-secondary-glow: #0c3b2e;
+}
 body {
-    background-color: skyblue;
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
+    height: 100vh;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-card {
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    h3 {
+        margin-top: 0;
+        color: var(--color-primary);
+    }
+
+    p {
+        color: var(--color-text-secondary);
+        line-height: 1.5;
+    }
+
+    a {
+        color: var(--color-secondary);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+
+        &:hover {
+            color: var(--color-secondary-dim);
+        }
+    }
 }
