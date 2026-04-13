@@ -17,6 +17,12 @@ body {
     padding: 2rem;
 }
 
+.card-center-vert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .card-glow,
 .card-glow--strong,
 .card-glow--interactive {
@@ -82,7 +88,7 @@ p {
 }
 
 a {
-    color: red;
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
