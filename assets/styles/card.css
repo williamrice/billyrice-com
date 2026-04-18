@@ -1,0 +1,51 @@
+@import "variables.css";
+
+.card,
+.card--glow,
+.card--glow-strong,
+.card--glow-interactive {
+    width: 100%;
+    max-width: 480px;
+    min-height: fit-content;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.card--glow {
+    background: var(--color-bg-elevated);
+    border: 0.5px solid var(--color-primary-dim);
+    border-radius: 12px;
+    box-shadow:
+        0 0 0 1px var(--color-primary-glow),
+        0 0 24px 4px color-mix(in srgb, var(--color-primary) 20%, transparent),
+        0 0 60px 8px color-mix(in srgb, var(--color-primary) 8%, transparent);
+}
+
+/* punchy -- good for a featured/hero card */
+.card--glow-strong {
+    background: var(--color-bg-elevated);
+    border: 0.5px solid var(--color-primary);
+    border-radius: 12px;
+    box-shadow:
+        0 0 12px 2px color-mix(in srgb, var(--color-primary) 35%, transparent),
+        0 0 40px 8px color-mix(in srgb, var(--color-primary) 15%, transparent),
+        0 0 80px 16px color-mix(in srgb, var(--color-primary) 6%, transparent);
+}
+
+/* interactive -- glows on hover/focus */
+.card--glow-interactive {
+    background: var(--color-bg-elevated);
+    border: 0.5px solid var(--color-border);
+    border-radius: 12px;
+    transition:
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.card--glow-interactive:hover,
+.card--glow-interactive:focus-within {
+    border-color: var(--color-primary-dim);
+    box-shadow:
+        0 0 16px 3px color-mix(in srgb, var(--color-primary) 25%, transparent),
+        0 0 48px 8px color-mix(in srgb, var(--color-primary) 10%, transparent);
+}

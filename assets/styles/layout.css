@@ -1,0 +1,15 @@
+@import "variables.css";
+
+.card-layout {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.card-layout--center-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

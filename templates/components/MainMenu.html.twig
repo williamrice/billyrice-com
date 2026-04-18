@@ -1,15 +1,16 @@
 {% set currentRoute = app.request.attributes.get('_route') %}
 
-<nav{{ attributes.defaults({ class: 'menu-container' }) }}>
-  <div>logo</div>
-  <div class="menu-nav-container">
-    <ul>
+<div {{ attributes.defaults({ class: 'main-menu' }) }}>
+<div class="main-menu__content">
+  <div class="main-menu__brand"><h2>Billy Rice</h2></div>
+  <nav class="main-menu__nav">
+    <ul class="main-menu__list">
       {% for item in menu %}
         {% set isActive = currentRoute == item.route %}
-        <li>
+        <li class="main-menu__item">
           <a
             href="{{ path(item.route) }}"
-            class="{{ isActive ? 'is-active' : '' }}"
+            class="main-menu__link{{ isActive ? ' main-menu__link--active' : '' }}"
             {% if isActive %}aria-current="page"{% endif %}
           >
             {{ item.label }}
@@ -17,6 +18,9 @@
         </li>
       {% endfor %}
     </ul>
+  </nav>
+  <div class="main-menu__actions">
+    <twig:ux:icon name="mdi:github" width="24" height="24" class="main-menu__icon" />
   </div>
-  <div>actions</div>
-</nav>
+</div>
+</div>

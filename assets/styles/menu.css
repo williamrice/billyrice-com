@@ -1,26 +1,64 @@
 @import "variables.css";
 
-.menu-container {
+.main-menu {
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 1rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg-elevated);
+    width: 100%;
 }
 
-.menu-nav-container {
-    & ul {
-        display: flex;
-        gap: 1rem;
-        list-style: none;
-        text-decoration: none;
-        & li a {
-            color: var(--color-text-primary);
-        }
+.main-menu__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    gap: 1rem;
+    width: min(100%, var(--max-width-site));
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+}
 
-        & li a:hover,
-        & li a:focus,
-        & li a.is-active {
-            color: var(--color-primary);
-        }
-    }
+.main-menu__list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu__link {
+    color: var(--color-text-primary);
+}
+
+.main-menu__link--active {
+    color: var(--color-primary);
+}
+
+.main-menu__link--active:hover {
+    color: var(--color-primary);
+    filter: none;
+}
+
+.main-menu__link:hover:not(.main-menu__link--active),
+.main-menu__link:focus {
+    color: var(--color-text-primary);
+    filter: var(--filter-glow-primary);
+}
+
+.main-menu__icon {
+    width: 32px;
+    height: 32px;
+}
+
+.main-menu__icon:hover {
+    filter: var(--filter-glow-primary);
+    cursor: pointer;
+}
+
+.main-menu__brand:hover {
+    filter: var(--filter-glow-primary);
+    cursor: pointer;
 }

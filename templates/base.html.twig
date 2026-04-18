@@ -30,9 +30,11 @@
     <script src="https://cdn.jsdelivr.net/npm/frankenphp-hot-reload/+esm" type="module"></script>
     {% endif %}
 </head>
-<twig:MainMenu/>
 <body>
-    {% block body %}{% endblock %}
+    <twig:MainMenu/>
+    <main class="site-layout__main">
+        {% block body %}{% endblock %}
+    </main>
 </body>
 
 </html>
