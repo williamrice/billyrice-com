@@ -1,0 +1,26 @@
+@import "variables.css";
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+.menu-nav-container {
+    & ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        text-decoration: none;
+        & li a {
+            color: var(--color-text-primary);
+        }
+
+        & li a:hover,
+        & li a:focus,
+        & li a.is-active {
+            color: var(--color-primary);
+        }
+    }
+}

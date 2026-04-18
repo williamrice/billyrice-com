@@ -1,0 +1,22 @@
+{% set currentRoute = app.request.attributes.get('_route') %}
+
+<nav{{ attributes.defaults({ class: 'menu-container' }) }}>
+  <div>logo</div>
+  <div class="menu-nav-container">
+    <ul>
+      {% for item in menu %}
+        {% set isActive = currentRoute == item.route %}
+        <li>
+          <a
+            href="{{ path(item.route) }}"
+            class="{{ isActive ? 'is-active' : '' }}"
+            {% if isActive %}aria-current="page"{% endif %}
+          >
+            {{ item.label }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div>actions</div>
+</nav>
